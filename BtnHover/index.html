@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        html,body{width: 100%;height: 100%;box-sizing: border-box;
+             background-color: rgb(39, 1, 39);
+              display: grid;
+            place-items: center;}
+        div{
+           
+            display: grid;
+            place-items: center;
+            padding:1%;
+        }    
+        button{
+            width: 30%;
+            height: 15%;
+            font-size: 30px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            border: 2px solid rgb(199, 111, 199);
+            background-color: violet;
+            position: relative;
+            padding:1%;
+           
+        }    
+        button::before{
+            content:"";
+            width:90%;
+            height: 70%;
+            transition: all 0.3s;
+            position: absolute;
+            border-top: 5px solid rgb(0, 0, 0);
+            border-left: 5px solid rgb(0, 0, 0);
+            top:5%;
+            left:3%;
+        }
+        button::after{
+            content:"";
+            width:90%;
+            height: 70%;
+            transition: all 0.3s;
+            position: absolute;
+            border-bottom: 5px solid rgb(0, 0, 0);
+            border-right: 5px solid rgb(0, 0, 0);
+            bottom: 5%;
+            right: 3%;
+        }
+        button:hover::before ,button:hover::after{
+               width: 10%;
+               height:35%;
+        }
+        button:hover{
+            color:rgb(39, 1, 39);
+        }
+    </style>
+</head>
+<body>
+    
+    <button>REGISTER</button>
+</body>
+</html>

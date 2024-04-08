@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balling...</title>
+    <style>
+        *{
+            margin: 0%;
+            padding:0%;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: grid;
+            place-items: center;
+        }
+       
+        .box{
+            width: 200px;
+            height: 150px;
+        }
+        .balls{
+            display: flex;
+            width: 200px;
+            height: 150px;
+        }
+        .balls > div{
+            width: 20px;
+            height:20px;
+            margin: 5%;
+            border-radius: 100%;
+            background-color: rgb(2, 2, 45);
+            border: 1px solid rgb(0, 0, 32);
+            box-shadow: 0 0 10px white;
+            animation: bounce 1s linear infinite;
+        }
+        .line{
+            width: 170px;
+            border: 4px solid whitesmoke;
+        }
+        .balls :nth-child(2){
+            animation-delay: 0.2s;
+        }
+        .balls :nth-child(3){
+            animation-delay:.4s;
+        }
+        .balls :nth-child(4){
+            animation-delay:.6s;
+        }
+        .balls :nth-child(5){
+            animation-delay:.8s;
+        }
+        @keyframes bounce {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(120px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="balls">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+        </ul>
+        <!-- <div class="line"></div> -->
+    </div>
+</body>
+</html>
